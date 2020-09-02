@@ -42,7 +42,7 @@ A présent il est possible de choisir parmi deux méthodes:
 		>J'espère que votre open office est en français.
 	- Etendre le traitement jusqu'à la **colonne L** et la **ligne 235**.
 	- Ouvrir de nouveau une feuille et coller le traitement suivant en **A1**.
-```=CONCAT("insert into public.country (name,population,yearly_change,net_change,density,land_area,migrant,fertility_rate,medium_age,urban_population,world_share,insertion_date) values ('";$pays_cleaned.A2;"',";$pays_cleaned.B2;",";$pays_cleaned.C2;",";$pays_cleaned.D2;",";$pays_cleaned.E2;",";$pays_cleaned.F2;",";$pays_cleaned.G2;",";$pays_cleaned.H2;",";$pays_cleaned.I2;",";$pays_cleaned.J2;",";$pays_cleaned.K2;",";$pays_cleaned.L2;");")```
+```=CONCAT("insert into public.country (country_name,population,yearly_change,net_change,density,land_area,migrant,fertility_rate,medium_age,urban_population,world_share,insertion_date) values ('";$pays_cleaned.A2;"',";$pays_cleaned.B2;",";$pays_cleaned.C2;",";$pays_cleaned.D2;",";$pays_cleaned.E2;",";$pays_cleaned.F2;",";$pays_cleaned.G2;",";$pays_cleaned.H2;",";$pays_cleaned.I2;",";$pays_cleaned.J2;",";$pays_cleaned.K2;",";$pays_cleaned.L2;");")```
 	- Etendre le traitement jusqu'à la **colonne L** et la **ligne 235**
 - Copier la colonne **A** .
 - Sur DBeaver, ouvrir un nouveau script et sélectionner la base active appropriée.
