@@ -1,6 +1,6 @@
 create or replace function select_by_name (country_name text) 
 returns country as 
-$$ SELECT * FROM country WHERE country.name = country_name; $$ 
+$$ SELECT * FROM country WHERE country_name = country_name; $$ 
 LANGUAGE sql;
 
 /* 

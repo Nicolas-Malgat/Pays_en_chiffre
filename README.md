@@ -27,7 +27,7 @@ Un fichier **insert_pays.sql** est disponible dans le repository git.
 
 A présent il est possible de choisir parmi deux méthodes:
 
-#### Utiliser le fichier **create_country.ods** déjà existant.
+#### Utiliser le fichier **pays.csv.ods** déjà existant.
 - Copier et coller les données en **A1**.
 - Sur la seconde feuille les données devraient apparaître filtrées.
 - Sur la troisième feuille, les requêtes sql sont prêtes à exécuter.
@@ -35,7 +35,7 @@ A présent il est possible de choisir parmi deux méthodes:
 - Sur DBeaver, ouvrir un nouveau script et sélectionner la base active appropriée.
 - Coller et exécuter les requêtes.
 
-#### Insérer les fonctions de filtre et la création des requêtes:
+#### Créer un calc, insérer la fonctions de filtre et les insertions:
 - Créer une nouvelle feuille, la renommer "pays_cleaned".
 	- Copier/Coller le traitement suivant en **A1**.
 ```=SI(ESTVIDE($pays.A2)OU($pays.A2="N.A.");"NULL";SI(ESTNUM(TROUVE(" %"; $pays.A2)) ;SUBSTITUE($pays.A2;" %";"") ; SUBSTITUE($pays.A2;"'";" ")))```

@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS public.country;
+DROP TABLE IF EXISTS country CASCADE;
 
-CREATE TABLE public.country (
+CREATE TABLE country (
 	country_name varchar(50) NOT NULL,
 	population int8 NOT NULL,
 	yearly_change float4 NOT NULL,
@@ -25,30 +25,31 @@ return new;
 end; $$
 LANGUAGE PLPGSQL;
 
-DROP TRIGGER IF EXISTS trigger_name ON public.country;
 
-CREATE TRIGGER country_insertion_date BEFORE INSERT ON public.country
+DROP TRIGGER IF EXISTS trigger_name ON country;
+
+CREATE TRIGGER country_insertion_date BEFORE INSERT ON country
     FOR EACH ROW EXECUTE procedure country_insertion_date();
 
 -- FUNCTIONS
 
 create or replace function select_by_name (country_name text) 
 returns country as 
-$$ SELECT * FROM public.country WHERE country.name = country_name; $$ 
+$$ SELECT * FROM country WHERE country_name = country_name; $$ 
 LANGUAGE sql;
 
-CREATE OR REPLACE FUNCTION get_density(quart1 int, quart2 int, quart3 int)
-RETURNS table (name text, population bigint, density int, niveau_densite text) 
+CREATE OR REPLACE FUNCTION group_by_density(quart1 int, quart2 int, quart3 int)
+RETURNS table (country_name text, population bigint, density int, niveau_densite text) 
 AS $$
 
-SELECT name, population, density,
+SELECT country_name, population, density,
     CASE 
         WHEN density > quart1 THEN 'Extreme'
         WHEN density > quart2 THEN 'Forte'
         WHEN density > quart3 THEN 'Intermediaire'
         ELSE 'Faible'
     END as niveau_densite
-FROM public.country order by density DESC, population DESC;
+FROM country order by density DESC, population DESC;
 $$
 LANGUAGE SQL;
 

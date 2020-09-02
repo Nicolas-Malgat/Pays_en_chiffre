@@ -1,8 +1,8 @@
 CREATE OR REPLACE FUNCTION group_by_density(quart1 int, quart2 int, quart3 int)
-RETURNS table (name text, population bigint, density int, niveau_densite text) 
+RETURNS table (country_name text, population bigint, density int, niveau_densite text) 
 AS $$
 
-SELECT name, population, density,
+SELECT country_name, population, density,
     CASE 
         WHEN density > quart1 THEN 'Extreme'
         WHEN density > quart2 THEN 'Forte'
