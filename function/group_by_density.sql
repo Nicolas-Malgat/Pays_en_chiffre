@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION get_density(quart1 int, quart2 int, quart3 int)
+CREATE OR REPLACE FUNCTION group_by_density(quart1 int, quart2 int, quart3 int)
 RETURNS table (name text, population bigint, density int, niveau_densite text) 
 AS $$
 
@@ -14,5 +14,5 @@ $$
 LANGUAGE SQL;
 
 /*
-select * from get_density(1000, 100, 50)
+select * from group_by_density(1000, 100, 50)
 */
