@@ -2,7 +2,7 @@
 
 # Pays en chiffre
 
-"Pays en chiffre" est une base de donnée permettant d'observer plusieurs informations autour des population de 135 pays.
+"Pays en chiffre" est une base de donnée permettant d'observer les populations de 135 pays.
 ## Prérequis
 
 Posséder une instance [elephant](https://customer.elephantsql.com/instance).
@@ -66,13 +66,13 @@ La procédure est appelée avec la requête suivante
 ```SQL
 CALL insert_country('Exemple');
 
-SELECT * FROM country WHERE name = 'Exemple';
+SELECT * FROM country WHERE country_name = 'Exemple';
 ```
 -   configurer un  **trigger**  qui va mettre à jour la colonne de la table correspondant à la date de l'insertion
 
 On peut vérifier le résultat du trigger et de sa fonction associée avec cette requête
 ```SQL
-SELECT * FROM country;
+SELECT * FROM country LIMIT 10;
 ```
 -   réaliser une  **fonction ou procédure stoquée**  pour retourner les pays qui sont regroupés par 4 tranches (à definir) de densité de population
 
