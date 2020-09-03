@@ -2,7 +2,7 @@
 
 # Pays en chiffre
 
-"Pays en chiffre" est une base de donnée permettant d'observer plusieurs informations autour des population de 135 pays.
+"Pays en chiffre" est une base de donnée permettant d'observer les populations de 135 pays.
 ## Prérequis
 
 Posséder une instance [elephant](https://customer.elephantsql.com/instance).
