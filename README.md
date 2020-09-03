@@ -1,9 +1,10 @@
 # Pays en chiffre
 
-<img src="images/postgres-logo.gif" height="300" align="left"/>
-<img src="images/world.png" height="300" align="center"/>
-
 "Pays en chiffre" est une base de donnée permettant d'observer les populations de 135 pays.
+
+<img src="images/postgres-logo.gif" height="200" align="left"/>
+<img src="images/world.png" height="200" align="center"/>
+
 ## Prérequis
 
 Posséder une instance [elephant](https://customer.elephantsql.com/instance).
