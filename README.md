@@ -1,6 +1,7 @@
-﻿![](images/postgres-logo.gif)
-
 # Pays en chiffre
+
+<img src="images/postgres-logo.gif" height="300" align="left"/>
+<img src="images/world.png" height="300" align="center"/>
 
 "Pays en chiffre" est une base de donnée permettant d'observer les populations de 135 pays.
 ## Prérequis
