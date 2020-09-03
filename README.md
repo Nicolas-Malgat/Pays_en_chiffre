@@ -1,4 +1,4 @@
-﻿
+﻿![](images/postgres-logo.gif)
 
 # Pays en chiffre
 
